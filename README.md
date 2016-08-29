@@ -30,9 +30,18 @@ There is a way to write this script using hammer cli commands + python/curl, but
 By using python.requests and sessions, the TCP connection is opened once, and as long as there are no errors, the session stays open. This speeds up processing.
 
 ## How does it work?
+### The requests object and sessions.
 1. Create a python.requests object.
 2. Obtaining a session object from the request object.
 3. The connection will be reused for every called operation  on the session object.
+
+### The steps of the script
+1. Query the satellite by the :organizationid: using the search query.
+2. Iterate through the results and process each host record.
+3. Processing includes checking if the host already has subscriptions.
+4. Skip if [3] is true.
+5. Continuing processing the host by looking up the subscription id (this could be optimized).
+6. Finally, add the subscription to the host via it's :hostid:
 
 There are some variables to change:
 
