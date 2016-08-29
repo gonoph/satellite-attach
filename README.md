@@ -19,11 +19,11 @@ An unimpressive python script that attaches subscriptions to hosts.
 ## Why write it?
 There's a bugzilla that will be adding this functionality to the hammer command line, but it's not released as of the writing of this document.
 
-    https://bugzilla.redhat.com/show_bug.cgi?id=1366437
+https://bugzilla.redhat.com/show_bug.cgi?id=1366437
 
 Therefore, there's a need, right now, to attach subscriptions to hosts, based on how Candlepin handles expired subscriptions.
 
-    https://bugzilla.redhat.com/show_bug.cgi?id=1296978
+https://bugzilla.redhat.com/show_bug.cgi?id=1296978
 
 There is a way to write this script using hammer cli commands + python/curl, but it's slow. Hammer recreates the http connection with every invocation, as would curl.
 
@@ -45,7 +45,7 @@ There are some variables to change:
 ## A Note about Search Queries
 Foreman/Katello's search queries are both easy and yet difficult to master.
 
-    https://theforeman.org/manuals/1.12/index.html#4.1.5Searching
+https://theforeman.org/manuals/1.12/index.html#4.1.5Searching
 
 For me, the easiest way, is to search for a term in the GUI, the correct fact will normally pop up, and you can use that. For search terms that are multiple words, or have spaces, you must put them in double quotes.
 
